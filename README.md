@@ -79,23 +79,6 @@ The system is organized concentrically into 5 functional layers:
 ## Important Disclaimer
 CUBIX-ICODED is an experimental research project. Any performance hypotheses, theoretical interpretations, or unconventional electromagnetic concepts discussed within the project are exploratory and subject to ongoing testing, validation, and independent verification. The repository is intended primarily for engineering experimentation and geometric research.
 
-## Repository Structure
-```text
-CUBIX-ICODED/
-├── README.md
-├── ROADMAP.md
-├── BOM.md
-├── LICENSE
-├── cubix_visualizer.py
-├── CAD/
-│   ├── Fusion360/
-│   └── Renders/
-├── Simulations/
-├── Experimental-Logs/
-├── Coil-Configs/
-├── Docs/
-└── Prototype/
-
 
 ## Closing Statement
 CUBIX-ICODED represents a long-term experimental exploration into advanced electromechanical geometries, asymmetric field interaction, and modular engineering systems. The objective is not to claim finalized answers, but to build, test, measure, and evolve an open experimental platform through continuous iteration.
