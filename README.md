@@ -3,7 +3,7 @@
 
 **Author:** Bojan Sebastian Andrei (Cluj-Napoca, Romania)
 **License:** MIT
-**Status:** Phase 0 — Digital Geometry Validation
+**Status:** Phase 1 — Digital Geometry Validation 
 
 ---
 
