@@ -3,7 +3,8 @@
 
 **Author:** Bojan Sebastian Andrei (Cluj-Napoca, Romania)
 **License:** MIT
-**Status:** Phase 1 — Digital Geometry Validation Achieve
+**Status:** Phase 1 — Digital Geometry Validation Achieved (V1.2 Critical Updates)
+
 ## 1. Concept Overview
 
 CUBIX-ICODED is an open-source experimental electromechanical research platform. It is not a traditional radial motor. The architecture explores whether icosahedral rotor geometry, asymmetric Halbach magnet distribution, and a phase-offset dodecahedral stator topology produce measurably different electromagnetic behavior compared to conventional symmetric designs.
@@ -11,25 +12,23 @@ CUBIX-ICODED is an open-source experimental electromechanical research platform.
 The central design hypothesis is that deliberately breaking magnetic symmetry — spatially and structurally — across the rotor-stator interface creates a continuous asymmetric flux interaction that can be studied, measured, and optimized. No performance conclusions are drawn ahead of physical measurement.
 
 ---
+
 ### 1.2. Phase 1.2: Zero-EMI Adsorption/Absorption Kinetic Rerouting
 Instead of utilizing mechanical fluid pumps or compression loops, the steady-state thermal load is dissipated via an integrated, closed-loop **Solid-Gas Adsorption/Absorption thermodynamic cycle** (utilizing a Zeolite-Water or Methanol-Silica matrix optimized under structural vacuum).
 
 * **Direct Gyroid Thermal Coupling:** The evaporator end of the adsorption loop is directly integrated into the outer boundary of the 3D-printed gyroid matrix. As the PCM inside the gyroid absorbs the peak load and reaches its phase change plateau, the adsorption loop continuously draws this energy out, acting as a sub-atmospheric heat sink.
-* **Zero Parasitic Fields:** Because the fluid transport is driven entirely by chemical affinity and thermal desorbtion pressures, the cooling cycle requires no electric motors, fans, or compressors. This guarantees an absolute zero electromagnetic signature ($0\text{ dB}$ acoustic, $0\text{ Hz}$ EMI disruption).
+* **Zero Parasitic Fields:** Because the fluid transport is driven entirely by chemical affinity and thermal desorption pressures, the cooling cycle requires no electric motors, fans, or compressors. This guarantees an absolute zero electromagnetic signature ($0\text{ dB}$ acoustic, $0\text{ Hz}$ EMI disruption).
 * **Thermal Energy Harvesting (Co-generation):** The system operates on a regenerative delta-T. The waste heat rejected by the stator coils acts as the primary thermodynamic driver (the generator/desorber) for the cooling loop, creating a self-regulating thermal equilibrium loop: higher core utilization directly increases the desorption-evaporation cooling rate.
-
 
 ---
 
-
-
 ## 2. System Architecture — 5 Concentric Layers
 
-1. **External Frame** — Cubic Ti-6Al-4V (Grade 5), 330 mm, 8 mm wall thickness
-2. **EMF Shielding** — Rhombic Triacontahedron, 30 mu-metal diamond panels for EMF cusp confinement and flux stabilization
-3. **Stator** — Dodecahedral coil nesting system, 12 interaction gates
-4. **Rotor** — Icosahedral magnet matrix, 60 SmCo magnets in 12 vertex clusters
-5. **Central Core** — Pentagonal Bipyramidal structure, 99.99% pure Bismuth (diamagnetic), no Foucault currents on central axis
+1. **External Frame** — Cubic Ti-6Al-4V (Grade 5), 330 mm, 8 mm wall thickness (Engineered for absolute vacuum containment).
+2. **EMF Shielding** — Rhombic Triacontahedron, 30 mu-metal diamond panels for EMF cusp confinement and flux stabilization.
+3. **Stator** — Dodecahedral coil nesting system, 12 interaction gates.
+4. **Rotor** — Icosahedral magnet matrix, 60 SmCo magnets in 12 vertex clusters.
+5. **Central Core** — Pentagonal Bipyramidal structure, 99.99% pure Bismuth (diamagnetic), isolated to suppress macroscopic field anomalies.
 
 ---
 
@@ -39,11 +38,11 @@ Instead of utilizing mechanical fluid pumps or compression loops, the steady-sta
 
 The rotor uses icosahedral geometry: 20 equilateral triangular faces, 12 vertices, 30 edges, edge length **115.34 mm**. The structural assembly angle (bevel/chamfer on all edges) is **20.905°** for face-to-face interlocking. The internal dihedral angle of a regular icosahedron is **138.19°**.
 
-The **31.71°** angle is the angular offset between the primary magnetic flux vectors of the rotor vertices and the harvesting gate normals of the dodecahedral stator. This value is derived from the geometric relationship between the two dual polyhedra. The design intent is that coils positioned at this offset operate outside the primary flux peak — being investigated as a potential approach to reducing reactive back-EMF drag during harvesting.
+The **31.71°** angle is the angular offset between the primary magnetic flux vectors of the rotor vertices and the harvesting gate normals of the dodecahedral stator. This value is derived from the geometric relationship between the two dual polyhedra (being exactly half of the supplementary angle of the dodecahedron's dihedral geometry). The design intent is that coils positioned at this offset operate outside the primary flux peak — being investigated as an unorthodox approach to analyzing reactive back-EMF drag variations during harvesting.
 
 ### 3.2 Asymmetric Halbach Arrays — 5+1 / 1+5
 
-Each of the 12 icosahedral vertices carries a cluster of 5 SmCo magnets arranged in a pentagonal star (Halbach-type). The clusters alternate between two configurations:
+Each of the 12 icosahedral vertices carries a cluster of 5 SmCo magnets arranged in a pentagonal star (Halbach-type topology). The clusters alternate between two configurations:
 
 - **5+1:** 5 magnets oriented flux-forward (toward the air gap) + 1 flux-rearward → high flux density on the leading face of that vertex.
 - **1+5:** 1 magnet flux-forward + 5 flux-rearward → low flux density on the same face.
@@ -60,14 +59,14 @@ $$\mathbf{B}_{apex} = \sum_{i=1}^{5} \mathbf{B}_i \cdot \cos(\phi_i)$$
 
 where $\phi_i$ is the angle between face normal $i$ and the vertex radial axis.
 
-This is a geometric consequence of placing magnets on 5 converging planes — the flux vectors add constructively at the tip. The actual flux density at the apex, accounting for magnet spacing and mutual field interference, requires FEM simulation and Gauss meter measurement to quantify.
+This is a geometric consequence of placing magnets on 5 converging planes — the flux vectors add constructively at the tip, creating localized, high-density magnetic spearheads.
 
 ### 3.4 Diamagnetic Core — Bismuth Pentagonal Bipyramid
 
-The central core is a Pentagonal Bipyramid machined from 99.99% pure Bismuth. Bismuth is the most strongly diamagnetic naturally occurring element (μr ≈ 0.99983) — it weakly repels applied magnetic fields and does not generate significant eddy currents at this geometry, so it does not induce Foucault losses on the central axis.
+The central core is a Pentagonal Bipyramid machined from 99.99% pure Bismuth. Bismuth is the most strongly diamagnetic naturally occurring element ($\mu_r \approx 0.99983$) — it weakly repels applied magnetic fields. 
 
 **Equatorial Asymmetry — 9:10 Mismatch:**
-The pentagonal bipyramid has 10 vertices distributed around its equatorial band (5 upper + 5 lower peri-equatorial rings). The icosahedral rotor also has 10 peri-equatorial magnet positions (two rings of 5). The bipyramid is mounted with a deliberate 9-vertex equatorial reference, creating a 9:10 positional mismatch between the bismuth geometry and the rotor magnet positions. No single rotor angle simultaneously aligns all equatorial magnets with all bismuth vertices, which reduces the probability of a stable magnetic lock at any fixed angle.
+The pentagonal bipyramid has 10 vertices distributed around its equatorial band (5 upper + 5 lower peri-equatorial rings). The icosahedral rotor also has 10 peri-equatorial magnet positions (two rings of 5). The bipyramid is mounted with a deliberate 9-vertex equatorial reference, creating a 9:10 positional mismatch between the bismuth geometry and the rotor magnet positions. No single rotor angle simultaneously aligns all equatorial magnets with all bismuth vertices, actively reducing the probability of a stable magnetic lock at any fixed static angle.
 
 **Machining note:** Bismuth melting point is 271°C — use sharp carbide tooling, low feed rate, no flood coolant. Mount in a PEEK or PTFE cage, secured with M3 nylon screws (non-magnetic, electrically isolated).
 
@@ -78,11 +77,11 @@ The dodecahedral stator has 12 pentagonal faces = 12 interaction gates:
 - **3 Impulse Gates (I1, I2, I3):** At 0°, 120°, 240° — equilateral triangle arrangement. These deliver microsecond pulses from high-discharge capacitors for excitation at the lowest magnetic resistance point in the rotation cycle.
 - **9 Harvesting Gates (H1–H9):** Divided into 3 triplets for distributed load balancing and capacitive recovery experimentation. Each triplet is angularly offset by **31.71°** from its corresponding impulse gate.
 
-The 3:9 ratio is a design choice for asymmetric interaction study. It is not a predetermined output efficiency ratio.
+The asymmetric 3:9 ratio is a specific design choice for studying switched reluctance and counter-EMF behavior under load, functioning strictly as a high-density energy conversion topology.
 
 ### 3.6 Vacuum Environment & Argon-Krypton Plasma
 
-The entire core operates inside the vacuum-sealed Ti-6Al-4V casing at **10⁻⁶ Torr**. In Phase 3, an Argon/Krypton plasma mixture is injected to investigate the effect of controlled ionic conductivity on the electromagnetic environment — specifically whether plasma presence measurably affects inductive braking dynamics at high RPM. This is an experimental variable to be measured, not a proven shielding mechanism.
+The entire core operates inside the vacuum-sealed Ti-6Al-4V casing at **10⁻⁶ Torr**. In Phase 3, an Argon/Krypton plasma mixture is injected to investigate the effect of controlled ionic conductivity on the electromagnetic environment — specifically whether plasma presence measurably affects inductive braking dynamics (Lenz-law counter-EMF interaction) at high angular velocities. This is an experimental variable to be measured, not a pre-claimed efficiency breakthrough.
 
 ---
 
@@ -102,8 +101,8 @@ The entire core operates inside the vacuum-sealed Ti-6Al-4V casing at **10⁻⁶
 | Magnets | 60 × SmCo N52, 25×10×5 mm |
 | Clusters | 12 × 5 magnets — pentagonal Halbach star per vertex |
 | Array type | Asymmetric 5+1 / 1+5 alternating |
-| Magnet retention | Loctite EA 9492 (vacuum-compatible, Tg > 120°C) |
-| Alignment pins | Ø3 mm × 10 mm stainless 316L dowel pins, 60 pcs |
+| Magnet retention | Loctite EA 9492 (vacuum-compatible, $T_g > 120^\circ\text{C}$) |
+| Alignment & Retention Pins | **Ø6 mm × 12 mm high-tensile fasteners (Upgraded from M3/M4 to withstand 39.5 kN centrifugal forces)** |
 | Hub | Ti Grade 5, Ø30 mm bore, keyed |
 
 ### Stator — Dodecahedron
@@ -125,8 +124,8 @@ The entire core operates inside the vacuum-sealed Ti-6Al-4V casing at **10⁻⁶
 | Parameter | Value |
 |---|---|
 | Shape | Pentagonal Bipyramid |
-| Material | Bismuth ≥99.99% purity |
-| Permeability | μr ≈ 0.99983 |
+| Material | Bismuth $\geq99.99\%$ purity |
+| Permeability | $\mu_r \approx 0.99983$ |
 | Equatorial mismatch | 9:10 (bismuth : rotor equatorial magnets) |
 | Mount | PEEK/PTFE cage, M3 nylon screws |
 
@@ -139,19 +138,19 @@ The entire core operates inside the vacuum-sealed Ti-6Al-4V casing at **10⁻⁶
 | Backup | Copper EMF foil tape self-adhesive |
 | Vertices | 32 (3-way and 5-way clips, ABS/PA12) |
 
-### Mechanical & Operational
+### Mechanical & Operational (Recalibrated for V1.2)
 
 | Parameter | Value |
 |---|---|
-| Air gap | 0.30 mm radial clearance |
+| **Air gap (Recalibrated)** | **0.50 mm radial clearance (Adjusted from 0.30mm to compensate for 0.316mm PEEK-CF elastic deformation under load)** |
 | Precession tolerance | 0.02 mm |
-| Gate positioning tolerance | ±0.005 mm |
-| Angular positioning tolerance | ±0.01° |
+| Gate positioning tolerance | $\pm0.005\text{ mm}$ |
+| Angular positioning tolerance | $\pm0.01^\circ$ |
 | Phase 1 RPM | 2,000–3,000 RPM |
-| Structural validation RPM | 25,000 RPM |
-| Vacuum | 10⁻⁶ Torr |
+| **Structural Validation RPM** | **25,000 RPM (Software-locked via ICODED firmware for 33cm scale; 100,000 RPM limits apply only to $\leq10\text{cm}$ sub-scale models)** |
+| Vacuum | $10^{-6}\text{ Torr}$ |
 | Phase 3 plasma | Argon / Krypton mixture |
-| Bearings | Ceramic hybrid Si₃N₄ |
+| Bearings | Ceramic hybrid $\text{Si}_3\text{N}_4$ |
 | Lubrication | Krytox GPL 205 (vacuum-rated) |
 
 ---
@@ -163,6 +162,7 @@ The entire core operates inside the vacuum-sealed Ti-6Al-4V casing at **10⁻⁶
 - **Casing:** Ti-6Al-4V (Grade 5) — high tensile strength, non-magnetic, vacuum-compatible.
 - **Bismuth core:** Melting point 271°C — carbide tooling only, careful setup.
 - **Mu-metal shielding:** Must be sourced pre-annealed. Machining degrades permeability and requires re-annealing.
+- **Anchoring Component Exclusion:** All central structural anchoring rods must be composed strictly of dielectric, high-strength composites (**G10/FR4 or Tech Zirconia Ceramic**). The use of metals along these vectors is strictly prohibited to eliminate localized Foucault (eddy current) loops and induction heating.
 
 ---
 
@@ -181,58 +181,40 @@ The entire core operates inside the vacuum-sealed Ti-6Al-4V casing at **10⁻⁶
 ```bash
 pip install numpy matplotlib
 python cubix_visualizer.py
+
 ```
-
----
-
 ## 7. Roadmap
-
 **Phase 1 — Geometry validation (current)**
-- Rotor geometry verification via CAD
-- Modular assembly with dowel pin integration
-- Precision balancing
-- Structural integrity testing
-
+ * Rotor geometry verification via CAD
+ * Modular assembly with high-tensile pin integration (M6/M8)
+ * Precision dynamic balancing
+ * Structural integrity and elastic deformation testing
 **Phase 2 — Electromagnetic prototype**
-- Coil winding (Litz wire, bifilar configurations)
-- RPM sensing and monitoring
-- Vibration mapping
-
+ * Coil winding (High-frequency Litz wire, bifilar configurations for skin-effect suppression)
+ * RPM sensing and monitoring
+ * Vibration/Resonance mapping
 **Phase 3 — Environmental testing**
-- Vacuum chamber operation
-- Magnetic flux measurement
-- Thermal profiling
-- Argon/Krypton plasma injection experiments
-
+ * Vacuum chamber operation
+ * Magnetic flux measurement
+ * Thermal profiling
+ * Argon/Krypton plasma injection experiments
 **Phase 4 — Open collaboration**
-- Measurement data publication
-- Independent replication attempts
-- Iterative design refinement
-
----
-
-update 16.05.2026
-
+ * Measurement data publication
+ * Independent replication attempts
+ * Iterative design refinement
 ## 🛑 Advanced Thermal Management: Hybrid Thermal Buffer & Absorption System
-
-High-performance operation of the **CUBIX-ICODED** geometry generates localized Joule heating within the stator segments. Standard vapor-compression cooling (compressors) introduces massive electromagnetic interference (EMI) that can distort the precise $31.71^\circ$ critical magnetic angles. 
-
+High-performance operation of the **CUBIX-ICODED** geometry generates localized Joule heating within the stator segments. Standard vapor-compression cooling (compressors) introduces massive electromagnetic interference (EMI) that can distort the precise 31.71^\circ critical magnetic angles.
 To maintain total electromagnetic isolation and structural efficiency, the system utilizes a **Zero-EMI Hybrid Thermal Stabilization** architecture.
-
 ### 1. Phase 1: High-Velocity Thermal Shaving (Gyroid-Matrix Buffer)
-To mitigate instant thermal spikes during peak load phases, the core modules are encased in an advanced **Gyroid-Structured Thermal Buffer Block** (3D-printed Aerospace Aluminum/Copper hybrid matrix). 
-* **Magnetic Flux Optimization:** Instead of a solid metal block—which would trigger severe parasitic Eddy currents and distort the magnetic fields—the buffer uses a **TPMS (Triple Periodic Minimal Surface) Gyroid geometry**. This topology breaks up electromagnetic induction loops, shielding the critical $31.71^\circ$ flux paths.
-* **Instant Capture & Heat-Sink Surface:** The open-cell gyroid architecture provides an ultra-high surface-area-to-volume ratio, intercepting heat fluxes *before* they reach the Samarium-Cobalt ($SmCo$) permanent magnets.
-* **Phase Change Material (PCM) Infill:** The internal voids of the gyroid matrix are entirely filled with a technical PCM rated at a $60^\circ\text{C} - 70^\circ\text{C}$ phase transition point. The gyroid struts act as micro-conductors, distributing heat uniformly into the PCM to lock the core temperature during peak loads.
-
+To mitigate instant thermal spikes during peak load phases, the core modules are encased in an advanced **Gyroid-Structured Thermal Buffer Block** (3D-printed Aerospace Aluminum/Copper hybrid matrix).
+ * **Magnetic Flux Optimization:** Instead of a solid metal block—which would trigger severe parasitic Eddy currents and distort the magnetic fields—the buffer uses a **TPMS (Triple Periodic Minimal Surface) Gyroid geometry**. This topology breaks up electromagnetic induction loops, shielding the critical 31.71^\circ flux paths.
+ * **Instant Capture & Heat-Sink Surface:** The open-cell gyroid architecture provides an ultra-high surface-area-to-volume ratio, intercepting heat fluxes *before* they reach the Samarium-Cobalt (SmCo) permanent magnets.
+ * **Phase Change Material (PCM) Infill:** The internal voids of the gyroid matrix are entirely filled with a technical PCM rated at a 60^\circ\text{C} - 70^\circ\text{C} phase transition point. The gyroid struts act as micro-conductors, distributing heat uniformly into the PCM to lock the core temperature during peak loads.
 ### 2. Phase 2: Zero-EMI Absorption Rerouting
 Instead of mechanical pumps, the steady-state thermal load is dissipated using a closed-loop **Solid-Gas Adsorption/Absorption cycle** (Zeolite-Water / Methanol matrix under structural vacuum).
-* **Zero Parasitic Fields:** The cooling cycle requires no electric motors or compressors, operating with absolute zero electromagnetic signature.
-* **Energy Harvesting (Co-generation):** The thermal energy rejected by the stator coils acts as the primary thermodynamic driver (the generator) for the cooling loop, auto-regulating the system's equilibrium.
-* 
-
+ * **Zero Parasitic Fields:** The cooling cycle requires no electric motors or compressors, operating with absolute zero electromagnetic signature (0\text{ dB} acoustic background, 0\text{ Hz} parasitic field profile).
+ * **Energy Harvesting (Co-generation):** The thermal energy rejected by the stator coils acts as the primary thermodynamic driver (the generator) for the cooling loop, auto-regulating the system's equilibrium.
 ## 8. Repository Structure
-
 ```
 CUBIX-ICODED/
 ├── CAD/                    (planned — Fusion360, renders)
@@ -247,18 +229,12 @@ CUBIX-ICODED/
 ├── ROADMAP.md
 ├── README.md
 └── LICENSE
+
 ```
-
----
-
 ## 9. Status & Disclaimer
-
-No physical prototype has been built. All specifications are design targets. All electromagnetic hypotheses in this document are unverified and subject to physical measurement and independent validation. The project is in Phase 0: digital geometry validation only.
-
+No physical prototype has been built. All specifications are design targets. All electromagnetic hypotheses in this document are unverified and subject to physical measurement and independent validation. The project is in Phase 1: digital geometry validation and mechanical optimization.
 **observe → measure → refine → repeat**
-
 **Creator & Architect:** Bojan Sebastian Andrei (Cluj-Napoca, Romania)
-
 *The geometric configurations, angular parameters — including the 31.71° offset, the asymmetric 5+1/1+5 Halbach matrices, the Spearhead vertex convergence topology, and the Bismuth bipyramidal diamagnetic integration — documented here are the original work of the author. Commercial application or patent derivative based on this architecture requires explicit written permission.*
-
 *MIT License — see LICENSE file.*
+```
