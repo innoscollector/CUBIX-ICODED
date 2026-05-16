@@ -3,7 +3,14 @@
 
 **Author:** Bojan Sebastian Andrei (Cluj-Napoca, Romania)
 **License:** MIT
-**Status:** Phase 1 — Digital Geometry Validation 
+**Status:** Phase 1 — Digital Geometry Validation Achieve
+### 2. Phase 2: Zero-EMI Adsorption/Absorption Kinetic Rerouting
+Instead of utilizing mechanical fluid pumps or compression loops, the steady-state thermal load is dissipated via an integrated, closed-loop **Solid-Gas Adsorption/Absorption thermodynamic cycle** (utilizing a Zeolite-Water or Methanol-Silica matrix optimized under structural vacuum).
+
+* **Direct Gyroid Thermal Coupling:** The evaporator end of the adsorption loop is directly integrated into the outer boundary of the 3D-printed gyroid matrix. As the PCM inside the gyroid absorbs the peak load and reaches its phase change plateau, the adsorption loop continuously draws this energy out, acting as a sub-atmospheric heat sink.
+* **Zero Parasitic Fields:** Because the fluid transport is driven entirely by chemical affinity and thermal desorbtion pressures, the cooling cycle requires no electric motors, fans, or compressors. This guarantees an absolute zero electromagnetic signature ($0\text{ dB}$ acoustic, $0\text{ Hz}$ EMI disruption).
+* **Thermal Energy Harvesting (Co-generation):** The system operates on a regenerative delta-T. The waste heat rejected by the stator coils acts as the primary thermodynamic driver (the generator/desorber) for the cooling loop, creating a self-regulating thermal equilibrium loop: higher core utilization directly increases the desorption-evaporation cooling rate.
+
 
 ---
 
@@ -202,6 +209,26 @@ python cubix_visualizer.py
 - Iterative design refinement
 
 ---
+
+update 16.05.2026
+
+## 🛑 Advanced Thermal Management: Hybrid Thermal Buffer & Absorption System
+
+High-performance operation of the **CUBIX-ICODED** geometry generates localized Joule heating within the stator segments. Standard vapor-compression cooling (compressors) introduces massive electromagnetic interference (EMI) that can distort the precise $31.71^\circ$ critical magnetic angles. 
+
+To maintain total electromagnetic isolation and structural efficiency, the system utilizes a **Zero-EMI Hybrid Thermal Stabilization** architecture.
+
+### 1. Phase 1: High-Velocity Thermal Shaving (Gyroid-Matrix Buffer)
+To mitigate instant thermal spikes during peak load phases, the core modules are encased in an advanced **Gyroid-Structured Thermal Buffer Block** (3D-printed Aerospace Aluminum/Copper hybrid matrix). 
+* **Magnetic Flux Optimization:** Instead of a solid metal block—which would trigger severe parasitic Eddy currents and distort the magnetic fields—the buffer uses a **TPMS (Triple Periodic Minimal Surface) Gyroid geometry**. This topology breaks up electromagnetic induction loops, shielding the critical $31.71^\circ$ flux paths.
+* **Instant Capture & Heat-Sink Surface:** The open-cell gyroid architecture provides an ultra-high surface-area-to-volume ratio, intercepting heat fluxes *before* they reach the Samarium-Cobalt ($SmCo$) permanent magnets.
+* **Phase Change Material (PCM) Infill:** The internal voids of the gyroid matrix are entirely filled with a technical PCM rated at a $60^\circ\text{C} - 70^\circ\text{C}$ phase transition point. The gyroid struts act as micro-conductors, distributing heat uniformly into the PCM to lock the core temperature during peak loads.
+
+### 2. Phase 2: Zero-EMI Absorption Rerouting
+Instead of mechanical pumps, the steady-state thermal load is dissipated using a closed-loop **Solid-Gas Adsorption/Absorption cycle** (Zeolite-Water / Methanol matrix under structural vacuum).
+* **Zero Parasitic Fields:** The cooling cycle requires no electric motors or compressors, operating with absolute zero electromagnetic signature.
+* **Energy Harvesting (Co-generation):** The thermal energy rejected by the stator coils acts as the primary thermodynamic driver (the generator) for the cooling loop, auto-regulating the system's equilibrium.
+* 
 
 ## 8. Repository Structure
 
