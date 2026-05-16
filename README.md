@@ -4,7 +4,14 @@
 **Author:** Bojan Sebastian Andrei (Cluj-Napoca, Romania)
 **License:** MIT
 **Status:** Phase 1 — Digital Geometry Validation Achieve
-### 2. Phase 2: Zero-EMI Adsorption/Absorption Kinetic Rerouting
+## 1. Concept Overview
+
+CUBIX-ICODED is an open-source experimental electromechanical research platform. It is not a traditional radial motor. The architecture explores whether icosahedral rotor geometry, asymmetric Halbach magnet distribution, and a phase-offset dodecahedral stator topology produce measurably different electromagnetic behavior compared to conventional symmetric designs.
+
+The central design hypothesis is that deliberately breaking magnetic symmetry — spatially and structurally — across the rotor-stator interface creates a continuous asymmetric flux interaction that can be studied, measured, and optimized. No performance conclusions are drawn ahead of physical measurement.
+
+---
+### 1.2. Phase 1.2: Zero-EMI Adsorption/Absorption Kinetic Rerouting
 Instead of utilizing mechanical fluid pumps or compression loops, the steady-state thermal load is dissipated via an integrated, closed-loop **Solid-Gas Adsorption/Absorption thermodynamic cycle** (utilizing a Zeolite-Water or Methanol-Silica matrix optimized under structural vacuum).
 
 * **Direct Gyroid Thermal Coupling:** The evaporator end of the adsorption loop is directly integrated into the outer boundary of the 3D-printed gyroid matrix. As the PCM inside the gyroid absorbs the peak load and reaches its phase change plateau, the adsorption loop continuously draws this energy out, acting as a sub-atmospheric heat sink.
@@ -14,13 +21,7 @@ Instead of utilizing mechanical fluid pumps or compression loops, the steady-sta
 
 ---
 
-## 1. Concept Overview
 
-CUBIX-ICODED is an open-source experimental electromechanical research platform. It is not a traditional radial motor. The architecture explores whether icosahedral rotor geometry, asymmetric Halbach magnet distribution, and a phase-offset dodecahedral stator topology produce measurably different electromagnetic behavior compared to conventional symmetric designs.
-
-The central design hypothesis is that deliberately breaking magnetic symmetry — spatially and structurally — across the rotor-stator interface creates a continuous asymmetric flux interaction that can be studied, measured, and optimized. No performance conclusions are drawn ahead of physical measurement.
-
----
 
 ## 2. System Architecture — 5 Concentric Layers
 
