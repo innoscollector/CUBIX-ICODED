@@ -5,6 +5,10 @@
 **License:** MIT
 **Status:** Phase 1 — Digital Geometry Validation Achieved (V1.2 Critical Updates)
 
+-------------------
+For detailed mechanical parameters, structural validation data, and operational safety limits, please consult the Engineering Validation Status document
+-------------------
+
 ## 1. Concept Overview
 
 CUBIX-ICODED is an open-source experimental electromechanical research platform. It is not a traditional radial motor. The architecture explores whether icosahedral rotor geometry, asymmetric Halbach magnet distribution, and a phase-offset dodecahedral stator topology produce measurably different electromagnetic behavior compared to conventional symmetric designs.
