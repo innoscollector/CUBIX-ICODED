@@ -11,3 +11,16 @@ Operational RPM Limits (Safety Protocol):
 Sub-scale/Micro-models (≤10 cm): High-velocity threshold of up to 100,000 RPM is permissible only for validation models using ultra-light composite rotors, provided they pass a strict dynamic balancing test (unbalance threshold < 0.01 g).
 Geometric Flux Alignment:
 Critical Offset: The system maintains a constant 31.71° phase offset, derived from the Golden Ratio symmetry (\arccos(1/\phi^2)), specifically engineered to bypass Lenz's Law braking effects through temporal induction delay.
+
+
+### 👁️ Visualizing the Phase Shift (Cross-Section Analysis)
+
+> **Note:** The following cross-section illustrates the critical difference between mechanical balance and electromagnetic phase-shifting.
+
+![CUBIX-ICODED Magnetic Cross-Section](docs/images/magnetic_cross_section_placeholder.png)
+*Figure 1: Equatorial cross-section of the CUBIX-ICODED core. Notice the perfect radial symmetry of the mass distribution (preventing kinetic imbalance), contrasted by the 31.71° cascaded alignment of the Samarium-Cobalt clusters.*
+
+**Key Visual Takeaways:**
+1. **Mass Isotropic Distribution:** The physical structure is uniformly balanced around the central axis.
+2. **The 31.71° Slip Angle:** The magnetic clusters do not face the stator gates directly at the same time. The offset forces the magnetic interactions to occur sequentially, turning the opposing Lenz forces into a tangential slip rather than a direct axial collision.
+3. 
