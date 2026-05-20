@@ -1,4 +1,4 @@
-# CUBIX-ICODED — Roadmap
+o# CUBIX-ICODED — Roadmap
 
 **Author:** Bojan Sebastian Andrei (Cluj-Napoca, Romania)  
 **Repo:** https://github.com/innoscollector/CUBIX-ICODED  
