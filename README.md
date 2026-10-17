@@ -268,3 +268,13 @@ No physical prototype has been built. All specifications are design targets. All
 *The geometric configurations, angular parameters — including the 31.71° offset, the asymmetric 5+1/1+5 Halbach matrices, the Spearhead vertex convergence topology, and the Bismuth bipyramidal diamagnetic integration — documented here are the original work of the author. Commercial application or patent derivative based on this architecture requires explicit written permission.*
 *MIT License — see LICENSE file.*
 ```
+
+## 📄 Licență
+
+Acest proiect este distribuit sub o schemă de licențiere hibridă:
+
+* 💻 **Codul sursă și scripturile** sunt licențiate sub [MIT License](LICENSE.md#1-cod-sursă-și-scripturi-mit-license).
+* 📐 **Modelele 3D, geometriile și documentația** sunt licențiate sub [CC BY 4.0](LICENSE.md#2-modele-3d-geometrii-și-documentație-cc-by-40).
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
